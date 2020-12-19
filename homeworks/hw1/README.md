@@ -27,7 +27,14 @@
 ## 二、逼近型拟合方法
 
 - 固定幂基函数的最高次数m (m<n)，使用最小二乘法：$\min E$，其中 $E(x)=\sum_{i=0}^{n}(y_i-f(x_i))^2$ 拟合 $\{P_j\}$。
+
 - 岭回归（Ridge Regression）：对上述最小二乘法误差函数增加 $E_1$ 正则项，参数 $\lambda$，$\min (E+\lambda E_1)$，其中 $E_1=\sum_{i=1}^n\alpha_i^2$ 
+
+- $$
+  min\epsilon=|A\vec X-\vec Y|^2+\lambda \vec X^2
+  $$
+
+- 
 
 **输出形式**：${P_k}(x_k,y_k),k=1,2,\dots,r$。$x_k$ 沿着 $x$ 轴均匀采样（r可以取得大些，点就密些），$y_k$ 根据拟合出来的函数计算出来，依次连接这些点的 polyline 作为该拟合函数的图像绘制出来。
 

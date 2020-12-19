@@ -13,6 +13,7 @@ struct Ubpa::USRefl::TypeInfo<CanvasData> :
 #endif
     static constexpr AttrList attrs = {};
     static constexpr FieldList fields = {
+<<<<<<< Updated upstream
         Field {TSTR("points"), &Type::points},
         Field {TSTR("scrolling"), &Type::scrolling, AttrList {
             Attr {TSTR(UMeta::initializer), []()->Ubpa::valf2{ return { 0.f,0.f }; }},
@@ -26,6 +27,19 @@ struct Ubpa::USRefl::TypeInfo<CanvasData> :
         Field {TSTR("adding_line"), &Type::adding_line, AttrList {
             Attr {TSTR(UMeta::initializer), []()->bool{ return { false }; }},
         }},
+=======
+        Field{"points", &CanvasData::points},
+        Field{"lpoints", &CanvasData::lpoints},
+        Field{"tangents", &CanvasData::tangents},
+        Field{"delta", &CanvasData::delta},
+        Field{"scrolling", &CanvasData::scrolling},
+        Field{"method", &CanvasData::method},
+        Field{"selected", &CanvasData::selected},
+        Field{"opt_enable_grid", &CanvasData::opt_enable_grid},
+        Field{"opt_enable_context_menu", &CanvasData::opt_enable_context_menu},
+        Field{"adding_line", &CanvasData::adding_line},
+        Field{"ChangeControlPoint", &CanvasData::ChangeControlPoint},
+>>>>>>> Stashed changes
     };
 };
 

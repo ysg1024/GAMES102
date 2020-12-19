@@ -13,6 +13,7 @@ struct Ubpa::USRefl::TypeInfo<CanvasData> :
 #endif
     static constexpr AttrList attrs = {};
     static constexpr FieldList fields = {
+<<<<<<< Updated upstream
         Field {TSTR("points"), &Type::points},
         Field {TSTR("scrolling"), &Type::scrolling, AttrList {
             Attr {TSTR(UMeta::initializer), []()->Ubpa::valf2{ return { 0.f,0.f }; }},
@@ -26,6 +27,29 @@ struct Ubpa::USRefl::TypeInfo<CanvasData> :
         Field {TSTR("adding_line"), &Type::adding_line, AttrList {
             Attr {TSTR(UMeta::initializer), []()->bool{ return { false }; }},
         }},
+=======
+        Field{"points", &CanvasData::points},
+        Field{"scrolling", &CanvasData::scrolling},
+        Field{"Vandermonde", &CanvasData::Vandermonde},
+        Field{"Gauss", &CanvasData::Gauss},
+        Field{"Least_Squares", &CanvasData::Least_Squares},
+        Field{"Ridge_Regression", &CanvasData::Ridge_Regression},
+        Field{"opt_enable_Vandermonde", &CanvasData::opt_enable_Vandermonde},
+        Field{"opt_enable_Gauss", &CanvasData::opt_enable_Gauss},
+        Field{"opt_enable_LS", &CanvasData::opt_enable_LS},
+        Field{"opt_enable_RR", &CanvasData::opt_enable_RR},
+        Field{"LeastSquaresM", &CanvasData::LeastSquaresM},
+        Field{"RidgeRegressionLamda", &CanvasData::RidgeRegressionLamda},
+        Field{"uniform", &CanvasData::uniform},
+        Field{"chord", &CanvasData::chord},
+        Field{"centripetal", &CanvasData::centripetal},
+        Field{"opt_enable_uniform", &CanvasData::opt_enable_uniform},
+        Field{"opt_enable_chord", &CanvasData::opt_enable_chord},
+        Field{"opt_enable_centripetal", &CanvasData::opt_enable_centripetal},
+        Field{"opt_enable_grid", &CanvasData::opt_enable_grid},
+        Field{"opt_enable_context_menu", &CanvasData::opt_enable_context_menu},
+        Field{"adding_line", &CanvasData::adding_line},
+>>>>>>> Stashed changes
     };
 };
 
